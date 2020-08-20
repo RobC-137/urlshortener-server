@@ -11,6 +11,7 @@ const Url = require('./models/Url');
 require('dotenv').config();
 
 const app = express()
+app.enable('trust proxy');
 const port = process.env.PORT || 3000
 
 app.use(morgan('tiny'));
