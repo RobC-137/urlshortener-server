@@ -79,7 +79,7 @@ exports.save_url_to_db = (UrlModel, SchemaValidator, SlugGenerator, TypeObjectId
             const saved = await urlDb.save();
             res.json({
                 saved: true,
-                shortenedUrl: domain + slug
+                shortenedUrl: `${domain}/${slug}`
             });
         } catch (error) {
             next(error);
